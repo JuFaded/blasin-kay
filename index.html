@@ -7,6 +7,35 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Blasian Touchh — luxury wig installs, sew-ins and Fulani braids in Sunrise, FL. Book your appointment online.">
 <meta name="theme-color" content="#050608">
+<link rel="canonical" href="https://blasian-touchh.vercel.app/">
+<meta property="og:url" content="https://blasian-touchh.vercel.app/">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Blasian Touchh",
+  "description": "Wig installs, sew-ins, frontals and Fulani braids in Sunrise, FL.",
+  "url": "https://blasian-touchh.vercel.app/",
+  "telephone": "+1-954-520-4723",
+  "address": { "@type": "PostalAddress", "addressLocality": "Sunrise", "addressRegion": "FL", "addressCountry": "US" },
+  "areaServed": "Sunrise, FL",
+  "sameAs": ["https://www.instagram.com/blasiantouchh/"],
+  "priceRange": "$90–$220",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Hair services",
+    "itemListElement": [
+      { "@type": "Offer", "price": "150", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "Signature Wig Install" } },
+      { "@type": "Offer", "price": "100", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "Used Wig Installation" } },
+      { "@type": "Offer", "price": "90", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "Thursday Quick Install Special" } },
+      { "@type": "Offer", "price": "130", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "Basic Wig Install" } },
+      { "@type": "Offer", "price": "150", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "Traditional / Frontal / Closure Sew-In" } },
+      { "@type": "Offer", "price": "220", "priceCurrency": "USD", "itemOffered": { "@type": "Service", "name": "Fulani Braids w/ Sew-in" } }
+    ]
+  }
+}
+</script>
 <meta property="og:title" content="Blasian Touchh · Sunrise, FL">
 <meta property="og:description" content="Wig installs, sew-ins and Fulani braids. Book your appointment online.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -303,37 +332,13 @@ section { padding-block: clamp(64px, 11vw, 120px); }
   list-style: none; margin: 0; padding: 0;
 }
 @media (max-width: 760px) { .prep { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.prep button {
-  position: relative; width: 100%; height: 100%; min-height: 76px;
-  display: flex; align-items: center; gap: 12px; text-align: left;
-  padding: 14px 16px; cursor: pointer; color: var(--pearl);
-  font: 500 .95rem/1.35 var(--font-body);
+.prep li {
+  display: flex; align-items: center; gap: 12px; min-height: 76px; padding: 14px 16px;
+  font: 500 .95rem/1.35 var(--font-body); color: var(--pearl);
   background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
-  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
-  transition: border-color .3s, background .3s, box-shadow .3s, transform .3s;
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); min-width: 0;
 }
-.prep button:hover { border-color: rgba(159, 227, 255, .55); transform: translateY(-2px); }
-.prep .check {
-  flex: none; width: 24px; height: 24px; border-radius: 50%;
-  border: 1.5px solid rgba(159, 227, 255, .6); display: grid; place-items: center;
-  transition: background .3s, border-color .3s, box-shadow .3s;
-}
-.prep .check svg { width: 13px; height: 13px; color: var(--ink); opacity: 0; transform: scale(.4); transition: .3s; }
-.prep button[aria-pressed="true"] {
-  background: linear-gradient(135deg, rgba(159, 227, 255, .2), rgba(76, 195, 245, .08));
-  border-color: var(--ice); box-shadow: 0 0 24px -6px rgba(76, 195, 245, .6);
-}
-.prep button[aria-pressed="true"] .check { background: var(--ice); border-color: var(--ice); box-shadow: var(--glow-soft); }
-.prep button[aria-pressed="true"] .check svg { opacity: 1; transform: none; }
-.prep-meter {
-  margin: 30px auto 0; max-width: 360px; text-align: center; color: var(--muted); font-size: .88rem;
-}
-.prep-bar { height: 3px; border-radius: 3px; background: rgba(159, 227, 255, .14); overflow: hidden; margin-top: 8px; }
-.prep-bar span {
-  display: block; height: 100%; width: 0%; border-radius: inherit;
-  background: linear-gradient(90deg, var(--ice), var(--blush));
-  box-shadow: 0 0 10px var(--ice); transition: width .5s cubic-bezier(.2, .8, .2, 1);
-}
+.prep .mark { flex: none; color: var(--ice); text-shadow: var(--glow-soft); font-size: .9rem; }
 
 /* ---------- Hours + Contact ---------- */
 .info { display: grid; gap: 22px; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
@@ -580,19 +585,15 @@ footer p { margin: 10px 0 0; color: var(--muted); font-size: .88rem; }
   <section id="prep">
     <div class="wrap">
       <h2 class="title"><span class="title-main">Before Your</span><span class="title-script">Appointment</span></h2>
-      <p class="lede">Tap each one off as you get ready, gorgeous.</p>
+      <p class="lede">These are required for every appointment.</p>
       <ul class="prep">
-        <li class="reveal"><button type="button" id="prep-1" aria-pressed="false"><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Unit must be dropped off 2 days before.</button></li>
-        <li class="reveal" style="--d:.06s"><button type="button" id="prep-2" aria-pressed="false"><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Come with clean, dry hair.</button></li>
-        <li class="reveal" style="--d:.12s"><button type="button" id="prep-3" aria-pressed="false"><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Bring inspiration photos.</button></li>
-        <li class="reveal" style="--d:.18s"><button type="button" id="prep-4" aria-pressed="false"><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Avoid pre-conditioning treatments.</button></li>
-        <li class="reveal" style="--d:.24s"><button type="button" id="prep-5" aria-pressed="false"><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Notify us at least 24 hours to reschedule.</button></li>
-        <li class="reveal" style="--d:.30s"><button type="button" id="prep-6" aria-pressed="false"><span class="check"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7"/></svg></span>Relax during the appointment.</button></li>
+        <li class="reveal"><span class="mark" aria-hidden="true">✦</span>Unit must be dropped off 2 days before.</li>
+        <li class="reveal" style="--d:.06s"><span class="mark" aria-hidden="true">✦</span>Come with clean, dry hair.</li>
+        <li class="reveal" style="--d:.12s"><span class="mark" aria-hidden="true">✦</span>Bring inspiration photos.</li>
+        <li class="reveal" style="--d:.18s"><span class="mark" aria-hidden="true">✦</span>Avoid pre-conditioning treatments.</li>
+        <li class="reveal" style="--d:.24s"><span class="mark" aria-hidden="true">✦</span>Notify us at least 24 hours to reschedule.</li>
+        <li class="reveal" style="--d:.30s"><span class="mark" aria-hidden="true">✦</span>Relax during the appointment.</li>
       </ul>
-      <div class="prep-meter" aria-live="polite">
-        <span id="prep-count">0 of 6 ready</span>
-        <div class="prep-bar"><span id="prep-fill"></span></div>
-      </div>
     </div>
   </section>
 
@@ -794,23 +795,6 @@ const PHONE = "+19545204723";
     fits(); addEventListener("resize", fits);
     if (document.fonts) document.fonts.ready.then(fits);
   });
-
-  // Prep checklist (remembered on this device)
-  const KEY = "bt-prep";
-  let saved = [];
-  try { saved = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch (e) {}
-  const prepBtns = $$(".prep button");
-  const meter = () => {
-    const n = prepBtns.filter(b => b.getAttribute("aria-pressed") === "true").length;
-    $("#prep-count").textContent = n === prepBtns.length ? "All set — see you soon, gorgeous ✦" : `${n} of ${prepBtns.length} ready`;
-    $("#prep-fill").style.width = (n / prepBtns.length * 100) + "%";
-    try { localStorage.setItem(KEY, JSON.stringify(prepBtns.filter(b => b.getAttribute("aria-pressed") === "true").map(b => b.id))); } catch (e) {}
-  };
-  prepBtns.forEach(b => {
-    if (saved.includes(b.id)) b.setAttribute("aria-pressed", "true");
-    b.addEventListener("click", () => { b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true"); meter(); });
-  });
-  meter();
 
   // Booking sheet
   const sheet = $("#sheet"), go = $("#sheet-go"), agree = $("#agree");
